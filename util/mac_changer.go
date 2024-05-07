@@ -1,4 +1,4 @@
-package macchanger
+package util
 
 import (
 	"flag"

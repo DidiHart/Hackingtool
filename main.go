@@ -1,8 +1,9 @@
 package main
 
-import "github.com/didihart/hacking_tool/scanners"
+import "github.com/didihart/hacking_tool/util"
 
 func main() {
 	// scanners.BasicScanner()
-	scanners.NetworkScanner()
+	// util.NetworkScanner()
+	util.PacketSniffer()
 }

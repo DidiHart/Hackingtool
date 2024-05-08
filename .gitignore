@@ -8,3 +8,5 @@
 .env
 *.csv
 *.json
+*.bat
+*.ps1

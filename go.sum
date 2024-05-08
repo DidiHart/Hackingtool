@@ -1,3 +1,5 @@
+github.com/DimitarPetrov/stegify v0.0.0-20230411060737-5d278781a3c1 h1:rNwKbLSjAd4w7TqgNf2RJ298yNVy8UomsZw4yeloHjQ=
+github.com/DimitarPetrov/stegify v0.0.0-20230411060737-5d278781a3c1/go.mod h1:x0wKH7k9G68nVhLLQyNCO/fyPnK8Smd+KwO/kyVmTt0=
 github.com/TheTitanrain/w32 v0.0.0-20200114052255-2654d97dbd3d h1:2xp1BQbqcDDaikHnASWpVZRjibOxu7y9LhAv04whugI=
 github.com/TheTitanrain/w32 v0.0.0-20200114052255-2654d97dbd3d/go.mod h1:peYoMncQljjNS6tZwI9WVyQB3qZS6u79/N3mBOcnd3I=
 github.com/Ullaakut/nmap/v3 v3.0.3 h1:bSFREzf0vWOi27vncgP/tiIRUx2OP+N0hGo8O/YHec8=
